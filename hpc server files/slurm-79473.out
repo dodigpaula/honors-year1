@@ -1,0 +1,33 @@
+2021-05-12 22:34:38.289724: I tensorflow/compiler/jit/xla_cpu_device.cc:41] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2021-05-12 22:34:38.290184: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  SSE4.1 SSE4.2 AVX AVX2 AVX512F FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2021-05-12 22:34:38.293930: I tensorflow/core/common_runtime/process_util.cc:146] Creating new thread pool with default inter op setting: 2. Tune using inter_op_parallelism_threads for best performance.
+2021-05-12 22:34:40.246661: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:116] None of the MLIR optimization passes are enabled (registered 2)
+2021-05-12 22:34:40.247358: I tensorflow/core/platform/profile_utils/cpu_utils.cc:112] CPU Frequency: 2095085000 Hz
+2021-05-12 22:34:46.312611: W tensorflow/core/framework/op_kernel.cc:1763] OP_REQUIRES failed at mkl_maxpooling_op.cc:212 : Aborted: Compute received an exception:Status: 2, message: could not create a descriptor for a pooling forward propagation primitive, in file tensorflow/core/kernels/mkl/mkl_maxpooling_op.cc:210
+/home/TUE/20190876/miniconda3/envs/env_name/lib/python3.7/site-packages/rasterio/__init__.py:219: NotGeoreferencedWarning: Dataset has no geotransform set. The identity matrix may be returned.
+  s = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)
+Epoch 1/2
+Traceback (most recent call last):
+  File "script.py", line 136, in <module>
+    model.fit(data_gen(image, out, for_train = True), validation_data = data_gen(image, out, for_train=False), epochs=2)
+  File "/home/TUE/20190876/miniconda3/envs/env_name/lib/python3.7/site-packages/tensorflow/python/keras/engine/training.py", line 1100, in fit
+    tmp_logs = self.train_function(iterator)
+  File "/home/TUE/20190876/miniconda3/envs/env_name/lib/python3.7/site-packages/tensorflow/python/eager/def_function.py", line 828, in __call__
+    result = self._call(*args, **kwds)
+  File "/home/TUE/20190876/miniconda3/envs/env_name/lib/python3.7/site-packages/tensorflow/python/eager/def_function.py", line 888, in _call
+    return self._stateless_fn(*args, **kwds)
+  File "/home/TUE/20190876/miniconda3/envs/env_name/lib/python3.7/site-packages/tensorflow/python/eager/function.py", line 2943, in __call__
+    filtered_flat_args, captured_inputs=graph_function.captured_inputs)  # pylint: disable=protected-access
+  File "/home/TUE/20190876/miniconda3/envs/env_name/lib/python3.7/site-packages/tensorflow/python/eager/function.py", line 1919, in _call_flat
+    ctx, args, cancellation_manager=cancellation_manager))
+  File "/home/TUE/20190876/miniconda3/envs/env_name/lib/python3.7/site-packages/tensorflow/python/eager/function.py", line 560, in call
+    ctx=ctx)
+  File "/home/TUE/20190876/miniconda3/envs/env_name/lib/python3.7/site-packages/tensorflow/python/eager/execute.py", line 60, in quick_execute
+    inputs, attrs, num_outputs)
+tensorflow.python.framework.errors_impl.AbortedError:  Compute received an exception:Status: 2, message: could not create a descriptor for a pooling forward propagation primitive, in file tensorflow/core/kernels/mkl/mkl_maxpooling_op.cc:210
+	 [[node model/max_pooling2d_2/MaxPool (defined at script.py:136) ]] [Op:__inference_train_function_2826]
+
+Function call stack:
+train_function
+

@@ -1,0 +1,5 @@
+#!/bin/bash
+source /mnt/server-home/TUE/20190876/miniconda3/etc/profile.d/conda.sh
+source activate env_name
+python script.py
+source deactivate
